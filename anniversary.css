@@ -1,0 +1,396 @@
+/* Anniversary Page Styling */
+:root {
+    --primary-pink: #ffb6c1;
+    --dark-pink: #ff8da1;
+    --light-pink: #ffd1d9;
+    --white: #ffffff;
+    --accent: #ff4d6d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, var(--light-pink) 0%, var(--primary-pink) 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    z-index: 10;
+}
+
+.header {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: var(--accent);
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.date {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: #666;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 77, 109, 0.2);
+    padding: 40px;
+    margin: 0 auto 50px;
+    max-width: 600px;
+    position: relative;
+    overflow: hidden;
+    animation: float 6s ease-in-out infinite;
+}
+
+.card:before, .card:after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: var(--light-pink);
+    opacity: 0.5;
+    border-radius: 50%;
+}
+
+.card:before {
+    top: -20px;
+    left: -20px;
+}
+
+.card:after {
+    bottom: -20px;
+    right: -20px;
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+}
+
+.message {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Hearts Animation */
+.hearts-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.heart {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: var(--accent);
+    transform: rotate(45deg);
+    opacity: 0.6;
+}
+
+.heart:before, 
+.heart:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: var(--accent);
+    border-radius: 50%;
+}
+
+.heart:before {
+    top: -15px;
+    left: 0;
+}
+
+.heart:after {
+    top: 0;
+    left: -15px;
+}
+
+.heart1 {
+    top: 10%;
+    left: 10%;
+    animation: float 10s ease-in-out infinite, pulse 2s infinite;
+}
+
+.heart2 {
+    top: 20%;
+    right: 15%;
+    animation: float 8s ease-in-out infinite, pulse 3s infinite;
+}
+
+.heart3 {
+    bottom: 25%;
+    left: 20%;
+    animation: float 12s ease-in-out infinite, pulse 4s infinite;
+}
+
+.heart4 {
+    bottom: 10%;
+    right: 10%;
+    animation: float 9s ease-in-out infinite, pulse 2.5s infinite;
+}
+
+.heart5 {
+    top: 40%;
+    left: 5%;
+    animation: float 11s ease-in-out infinite, pulse 3.5s infinite;
+}
+
+.heart6 {
+    top: 35%;
+    right: 5%;
+    animation: float 7s ease-in-out infinite, pulse 2.8s infinite;
+}
+
+/* Roses */
+.roses {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.rose {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23ff4d6d' d='M12,2C7.03,2,3,6.03,3,11c0,3.1,1.56,5.83,3.94,7.47l-0.01,0.01l4.93,4.93c0.27,0.27,0.71,0.27,0.98,0l4.91-4.91l-0.01-0.01C20.44,16.83,22,14.1,22,11C22,6.03,17.97,2,13,2H12z'/%3E%3C/svg%3E");
+    opacity: 0.8;
+}
+
+.rose1 {
+    top: 15%;
+    left: 5%;
+    transform: rotate(20deg);
+    animation: float 12s ease-in-out infinite;
+}
+
+.rose2 {
+    bottom: 20%;
+    right: 5%;
+    transform: rotate(-15deg) scale(1.2);
+    animation: float 10s ease-in-out 1s infinite;
+}
+
+.rose3 {
+    top: 75%;
+    left: 50%;
+    transform: rotate(10deg) scale(0.8);
+    animation: float 8s ease-in-out 2s infinite;
+}
+
+/* Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: rotate(45deg) scale(1);
+    }
+    50% {
+        transform: rotate(45deg) scale(1.1);
+    }
+    100% {
+        transform: rotate(45deg) scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .message {
+        font-size: 1.5rem;
+    }
+    
+    .card {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .message {
+        font-size: 1.3rem;
+    }
+    
+    .card {
+        padding: 25px 15px;
+    }
+    
+    .date {
+        font-size: 1rem;
+    }
+}
+/* Anniversary Page Styling */
+:root {
+    --primary-pink: #ffb6c1;
+    --dark-pink: #ff8da1;
+    --light-pink: #ffd1d9;
+    --white: #ffffff;
+    --accent: #ff4d6d;
+}
+
+// ... existing code ...
+
+/* Petals Animation */
+.petals-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.petal {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--light-pink);
+    border-radius: 15px 0;
+    opacity: 0.7;
+    transform-origin: center bottom;
+}
+
+.petal1 {
+    top: -5%;
+    left: 10%;
+    animation: falling 15s linear infinite, rotating 10s linear infinite;
+    animation-delay: 0s;
+}
+
+.petal2 {
+    top: -15%;
+    left: 20%;
+    animation: falling 12s linear infinite, rotating 8s linear infinite;
+    animation-delay: 1s;
+}
+
+.petal3 {
+    top: -10%;
+    left: 35%;
+    animation: falling 14s linear infinite, rotating 11s linear infinite;
+    animation-delay: 2s;
+}
+
+.petal4 {
+    top: -20%;
+    left: 50%;
+    animation: falling 16s linear infinite, rotating 9s linear infinite;
+    animation-delay: 0.5s;
+}
+
+.petal5 {
+    top: -5%;
+    left: 65%;
+    animation: falling 13s linear infinite, rotating 12s linear infinite;
+    animation-delay: 2.5s;
+}
+
+.petal6 {
+    top: -15%;
+    left: 80%;
+    animation: falling 11s linear infinite, rotating 10s linear infinite;
+    animation-delay: 1.5s;
+}
+
+.petal7 {
+    top: -10%;
+    left: 90%;
+    animation: falling 17s linear infinite, rotating 7s linear infinite;
+    animation-delay: 3s;
+}
+
+.petal8 {
+    top: -20%;
+    left: 5%;
+    animation: falling 14s linear infinite, rotating 9s linear infinite;
+    animation-delay: 3.5s;
+}
+
+.petal9 {
+    top: -15%;
+    left: 55%;
+    animation: falling 12s linear infinite, rotating 11s linear infinite;
+    animation-delay: 4s;
+}
+
+.petal10 {
+    top: -5%;
+    left: 70%;
+    animation: falling 15s linear infinite, rotating 8s linear infinite;
+    animation-delay: 2s;
+}
+
+@keyframes falling {
+    0% {
+        top: -5%;
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+    75% {
+        transform: translateX(-20px);
+    }
+    100% {
+        top: 105%;
+        transform: translateX(0);
+    }
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
