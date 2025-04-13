@@ -235,49 +235,6 @@ h1 {
     }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-    
-    .message {
-        font-size: 1.5rem;
-    }
-    
-    .card {
-        padding: 30px 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2rem;
-    }
-    
-    .message {
-        font-size: 1.3rem;
-    }
-    
-    .card {
-        padding: 25px 15px;
-    }
-    
-    .date {
-        font-size: 1rem;
-    }
-}
-/* Anniversary Page Styling */
-:root {
-    --primary-pink: #ffb6c1;
-    --dark-pink: #ff8da1;
-    --light-pink: #ffd1d9;
-    --white: #ffffff;
-    --accent: #ff4d6d;
-}
-
-// ... existing code ...
-
 /* Petals Animation */
 .petals-container {
     position: absolute;
@@ -394,3 +351,36 @@ h1 {
         transform: rotate(360deg);
     }
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .message {
+        font-size: 1.5rem;
+    }
+    
+    .card {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .message {
+        font-size: 1.3rem;
+    }
+    
+    .card {
+        padding: 25px 15px;
+    }
+    
+    .date {
+        font-size: 1rem;
+    }
+} 
