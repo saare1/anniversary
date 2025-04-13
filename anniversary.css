@@ -5,6 +5,9 @@
     --light-pink: #ffd1d9;
     --white: #ffffff;
     --accent: #ff4d6d;
+    --rose-color: #ff4d6d;
+    --rose-dark: #e64161;
+    --stem-color: #4CAF50;
 }
 
 * {
@@ -210,6 +213,154 @@ h1 {
     animation: float 8s ease-in-out 2s infinite;
 }
 
+.rose4 {
+    top: 35%;
+    left: 80%;
+    transform: rotate(-5deg) scale(0.9);
+    animation: float 11s ease-in-out 1.5s infinite;
+}
+
+.rose5 {
+    top: 60%;
+    left: 15%;
+    transform: rotate(15deg) scale(1.1);
+    animation: float 9s ease-in-out 2.5s infinite;
+}
+
+.rose6 {
+    top: 45%;
+    left: 85%;
+    transform: rotate(-10deg) scale(0.85);
+    animation: float 13s ease-in-out 0.5s infinite;
+}
+
+.rose7 {
+    top: 20%;
+    left: 30%;
+    transform: rotate(25deg) scale(0.75);
+    animation: float 10s ease-in-out 3s infinite;
+}
+
+.rose8 {
+    top: 65%;
+    left: 75%;
+    transform: rotate(-20deg) scale(1.15);
+    animation: float 12s ease-in-out 2s infinite;
+}
+
+/* Card Roses */
+.card-roses {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.card-rose {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23ff4d6d' d='M12,2C7.03,2,3,6.03,3,11c0,3.1,1.56,5.83,3.94,7.47l-0.01,0.01l4.93,4.93c0.27,0.27,0.71,0.27,0.98,0l4.91-4.91l-0.01-0.01C20.44,16.83,22,14.1,22,11C22,6.03,17.97,2,13,2H12z'/%3E%3C/svg%3E");
+    opacity: 0.8;
+}
+
+.top-left {
+    top: -10px;
+    left: -10px;
+    transform: rotate(-15deg);
+}
+
+.top-right {
+    top: -10px;
+    right: -10px;
+    transform: rotate(15deg);
+}
+
+.bottom-left {
+    bottom: -10px;
+    left: -10px;
+    transform: rotate(-45deg);
+}
+
+.bottom-right {
+    bottom: -10px;
+    right: -10px;
+    transform: rotate(45deg);
+}
+
+/* Rose Borders */
+.rose-border {
+    position: absolute;
+    height: 100%;
+    width: 30px;
+    z-index: -1;
+}
+
+.left-border {
+    left: 0;
+}
+
+.right-border {
+    right: 0;
+}
+
+.border-rose {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23ff4d6d' d='M12,2C7.03,2,3,6.03,3,11c0,3.1,1.56,5.83,3.94,7.47l-0.01,0.01l4.93,4.93c0.27,0.27,0.71,0.27,0.98,0l4.91-4.91l-0.01-0.01C20.44,16.83,22,14.1,22,11C22,6.03,17.97,2,13,2H12z'/%3E%3C/svg%3E");
+    opacity: 0.7;
+}
+
+.br1 {
+    top: 20%;
+    animation: float 9s ease-in-out infinite;
+}
+
+.br2 {
+    top: 50%;
+    animation: float 11s ease-in-out 2s infinite;
+}
+
+.br3 {
+    top: 80%;
+    animation: float 10s ease-in-out 1s infinite;
+}
+
+.br4 {
+    top: 25%;
+    animation: float 12s ease-in-out 1.5s infinite;
+}
+
+.br5 {
+    top: 55%;
+    animation: float 8s ease-in-out 0.5s infinite;
+}
+
+.br6 {
+    top: 85%;
+    animation: float 10s ease-in-out 3s infinite;
+}
+
+/* New Rose Animation */
+@keyframes sway {
+    0% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+
 /* Animations */
 @keyframes float {
     0% {
@@ -383,4 +534,193 @@ h1 {
     .date {
         font-size: 1rem;
     }
+}
+
+/* Realistic Roses with Stems */
+.corner-roses {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.realistic-rose {
+    position: absolute;
+    width: 100px;
+    height: 150px;
+}
+
+.top-left-corner {
+    top: 20px;
+    left: 20px;
+    transform: rotate(45deg);
+}
+
+.top-right-corner {
+    top: 20px;
+    right: 20px;
+    transform: rotate(-45deg);
+}
+
+.bottom-left-corner {
+    bottom: 20px;
+    left: 20px;
+    transform: rotate(135deg);
+}
+
+.bottom-right-corner {
+    bottom: 20px;
+    right: 20px;
+    transform: rotate(-135deg);
+}
+
+.rose-bloom {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--rose-color);
+    border-radius: 50%;
+    box-shadow: 
+        0 0 0 10px rgba(255, 77, 109, 0.7),
+        0 0 0 20px rgba(255, 77, 109, 0.4),
+        0 0 0 30px rgba(255, 77, 109, 0.2);
+    z-index: 1;
+    animation: bloom 8s ease-in-out infinite;
+}
+
+.rose-stem {
+    position: absolute;
+    top: 35px;
+    left: 49px;
+    width: 4px;
+    height: 100px;
+    background-color: var(--stem-color);
+    z-index: 0;
+}
+
+.rose-leaf {
+    position: absolute;
+    width: 30px;
+    height: 15px;
+    background-color: var(--stem-color);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.left-leaf {
+    top: 70px;
+    left: 28px;
+    transform: rotate(-30deg);
+}
+
+.right-leaf {
+    top: 100px;
+    left: 53px;
+    transform: rotate(30deg);
+}
+
+@keyframes bloom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Rose Arch */
+.rose-arch {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.arch-rose {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23ff4d6d' d='M12,2C7.03,2,3,6.03,3,11c0,3.1,1.56,5.83,3.94,7.47l-0.01,0.01l4.93,4.93c0.27,0.27,0.71,0.27,0.98,0l4.91-4.91l-0.01-0.01C20.44,16.83,22,14.1,22,11C22,6.03,17.97,2,13,2H12z'/%3E%3C/svg%3E");
+    opacity: 0.9;
+    transform-origin: bottom center;
+}
+
+.ar1 {
+    top: 10px;
+    left: 5%;
+    animation: sway 5s ease-in-out infinite;
+}
+
+.ar2 {
+    top: 0;
+    left: 15%;
+    animation: sway 6s ease-in-out 0.5s infinite;
+}
+
+.ar3 {
+    top: -5px;
+    left: 25%;
+    animation: sway 4s ease-in-out 1s infinite;
+}
+
+.ar4 {
+    top: -10px;
+    left: 35%;
+    animation: sway 7s ease-in-out 0.2s infinite;
+}
+
+.ar5 {
+    top: -15px;
+    left: 45%;
+    animation: sway 5s ease-in-out 0.7s infinite;
+}
+
+.ar6 {
+    top: -10px;
+    left: 55%;
+    animation: sway 6s ease-in-out 1.2s infinite;
+}
+
+.ar7 {
+    top: -5px;
+    left: 65%;
+    animation: sway 4s ease-in-out 0.3s infinite;
+}
+
+.ar8 {
+    top: 0;
+    left: 75%;
+    animation: sway 5s ease-in-out 0.8s infinite;
+}
+
+.ar9 {
+    top: 10px;
+    left: 85%;
+    animation: sway 6s ease-in-out 0.5s infinite;
+}
+
+/* Add some decorative arch details */
+.rose-arch:before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent 0%, var(--accent) 20%, var(--accent) 80%, transparent 100%);
+    opacity: 0.5;
 } 
